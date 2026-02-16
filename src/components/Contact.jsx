@@ -2,9 +2,8 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const socials = [
-  { name: 'GitHub', href: '#' },
-  { name: 'LinkedIn', href: '#' },
-  { name: 'Twitter', href: '#' },
+  { name: 'GitHub', href: 'https://github.com/SarahDoma' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/saratu-doma-0a1a62312?utm_source=share_via&utm_content=profile&utm_medium=member_ios' },
 ]
 
 export default function Contact() {
@@ -47,7 +46,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="flex gap-4 flex-wrap"
           >
-            <a href="mailto:saratu@email.com"
+            <a href="mailto:saratudoma@gmail.com"
               className="inline-flex items-center gap-2 text-white font-medium text-sm px-8 py-3.5 rounded-full transition-all hover:-translate-y-0.5"
               style={{ backgroundColor: '#1a3cff', boxShadow: '0 4px 20px rgba(26,60,255,0.3)' }}
             >
@@ -57,7 +56,7 @@ export default function Contact() {
               </svg>
               Email me
             </a>
-            <a href="tel:"
+            <a href="tel:+2348133057362"
               className="inline-flex items-center gap-2 font-medium text-sm px-8 py-3.5 rounded-full border transition-all"
               style={{ color: '#0a0f2c', borderColor: '#e2e4f0', backgroundColor: 'transparent' }}
             >

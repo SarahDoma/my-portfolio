@@ -32,31 +32,56 @@ const projects = [
     comingSoon: false,
     images: ['/src/assets/electra.png'],
   },
-  // ADD UI/UX PROJECTS BELOW — supports multiple images:
-  {
+    {
     num: '04',
-    title: 'Your UI/UX Project Name',
+    title: 'Flux',
+    desc: 'An interactive particle system with three physics modes (Flow, Orbit, Burst). Real-time controls for particle count, speed, radius, and trail effects',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com/SarahDoma/generative-art.git',
+    live: 'https://generative-art-kohl.vercel.app/',
+    comingSoon: false,
+    images: ['/src/assets/flux.png'],
+  },
+    {
+    num: '05',
+    title: 'Time Block',
+    desc: 'A drag-and-drop time blocking calendar with customizable categories and productivity stats. Create custom block types, save templates, and track Deep Work vs Meeting balance.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com/SarahDoma/time-block.git',
+    live: 'https://time-block-green.vercel.app/',
+    comingSoon: false,
+    images: ['/src/assets/timeblock.png'],
+  },
+  {
+    num: '06',
+    title: 'FuelDey',
     desc: 'Description of your design work.',
-    tags: ['Figma', 'UI/UX', 'Prototyping'],
+    tags: ['Figma', 'UI/UX'],
     github: null,
-    live: '#',
+    live: 'https://www.figma.com/design/3MqhHwNSmBfeDH7sQ1BRyk/FuelDey2?node-id=0-1&t=JiyZTs9C9avN23t3-1',
     comingSoon: false,
     images: [
-      '/src/assets/uiux-1.png',
-      '/src/assets/uiux-2.png',
-      '/src/assets/uiux-3.png',
-    ],
+      '/src/assets/uiux-1.png', '/src/assets/uiux-2.png'],
+  },
+    {
+    num: '07',
+    title: 'Cognito',
+    desc: 'Description of your design work.',
+    tags: ['Figma', 'UI/UX'],
+    github: null,
+    live: 'https://www.figma.com/design/bP2HNLKcQKlbkYcsk41uCu/Cognito?node-id=0-1&t=9qbeud0CsgVwMDDo-1',
+    comingSoon: false,
+    images: [
+      '/src/assets/cognito.png', '/src/assets/Frame 1.png', '/src/assets/Frame 3.png', '/src/assets/Frame 4.png', '/src/assets/Frame 5.png', '/src/assets/Frame 6.png'],
   },
 ]
 
-// ── Lightbox ──────────────────────────────────────────────
 function Lightbox({ images, startIndex, onClose }) {
   const [current, setCurrent] = useState(startIndex)
 
   const prev = () => setCurrent(i => (i - 1 + images.length) % images.length)
   const next = () => setCurrent(i => (i + 1) % images.length)
 
-  // Keyboard navigation
   useEffect(() => {
     const handler = (e) => {
       if (e.key === 'Escape') onClose()
