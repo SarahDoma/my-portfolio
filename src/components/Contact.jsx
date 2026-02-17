@@ -23,7 +23,7 @@ export default function Contact() {
             animate={leftInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="font-extrabold leading-none tracking-tighter mb-6"
-            style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(2rem, 4vw, 3.5rem)', color: '#0a0f2c' }}
+            style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', color: '#0a0f2c' }}
           >
             Let's create<br />
             something <span style={{ color: '#1a3cff' }}>awesome</span>

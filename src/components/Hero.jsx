@@ -54,9 +54,7 @@ className="relative min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-cent
           className="text-sm lg:text-base leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0"
           style={{ color: '#4a4f6a' }}
         >
-          I build clean, responsive, and user-friendly web apps using React.js and
-          Tailwind CSS. I love problem-solving, tweaking layouts, and adding just
-          the right touch of animation to make a website feel alive.
+          Hey! I’m a Frontend Developer who loves building clean, responsive, and user-friendly web apps. I work mainly with React.js and Tailwind CSS. While frontend is my main focus, I also have a bit of experience with backend development, so I understand how everything connects behind the scenes. I enjoy problem-solving, tweaking layouts, and adding just the right touch of animation to make a website feel alive. Let’s create something awesome!
         </motion.p>
 
         {/* CTA Buttons */}
