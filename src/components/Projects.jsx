@@ -1,5 +1,18 @@
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
+import ayeWater from '../assets/aye-water.png'
+import nnpc from '../assets/nnpc.png'
+import electra from '../assets/electra.png'
+import flux from '../assets/flux.png'
+import timeblock from '../assets/timeblock.png'
+import uiux1 from '../assets/uiux-1.png'
+import uiux2 from '../assets/uiux-2.png'
+import cognito from '../assets/cognito.png'
+import frame1 from '../assets/Frame 1.png'
+import frame3 from '../assets/Frame 3.png'
+import frame4 from '../assets/Frame 4.png'
+import frame5 from '../assets/Frame 5.png'
+import frame6 from '../assets/Frame 6.png'
 
 const projects = [
   {
@@ -10,7 +23,7 @@ const projects = [
     github: 'https://github.com/SarahDoma/aye-waterr.git',
     live: 'https://aye-waterr.vercel.app/',
     comingSoon: false,
-    images: ['/src/assets/aye-water.png'],
+    images: [ayeWater], 
   },
   {
     num: '02',
@@ -20,7 +33,7 @@ const projects = [
     github: null,
     live: 'https://applicationportal.vercel.app/',
     comingSoon: false,
-    images: ['/src/assets/nnpc.png'],
+    images: [nnpc],
   },
   {
     num: '03',
@@ -30,7 +43,7 @@ const projects = [
     github: 'https://github.com/SarahDoma/fyp-frontend.git',
     live: 'https://fyp-frontend-three-pi.vercel.app/',
     comingSoon: false,
-    images: ['/src/assets/electra.png'],
+    images: [electra],
   },
   {
     num: '04',
@@ -40,7 +53,7 @@ const projects = [
     github: 'https://github.com/SarahDoma/generative-art.git',
     live: 'https://generative-art-kohl.vercel.app/',
     comingSoon: false,
-    images: ['/src/assets/flux.png'],
+    images: [flux],
   },
   {
     num: '05',
@@ -50,7 +63,7 @@ const projects = [
     github: 'https://github.com/SarahDoma/time-block.git',
     live: 'https://time-block-green.vercel.app/',
     comingSoon: false,
-    images: ['/src/assets/timeblock.png'],
+    images: [timeblock],
   },
   {
     num: '06',
@@ -60,8 +73,7 @@ const projects = [
     github: null,
     live: 'https://www.figma.com/design/3MqhHwNSmBfeDH7sQ1BRyk/FuelDey2?node-id=0-1&t=JiyZTs9C9avN23t3-1',
     comingSoon: false,
-    images: [
-      '/src/assets/uiux-1.png', '/src/assets/uiux-2.png'],
+    images: [uiux1, uiux2], 
   },
   {
     num: '07',
@@ -71,8 +83,7 @@ const projects = [
     github: null,
     live: 'https://www.figma.com/design/bP2HNLKcQKlbkYcsk41uCu/Cognito?node-id=0-1&t=9qbeud0CsgVwMDDo-1',
     comingSoon: false,
-    images: [
-      '/src/assets/cognito.png', '/src/assets/Frame 1.png', '/src/assets/Frame 3.png', '/src/assets/Frame 4.png', '/src/assets/Frame 5.png', '/src/assets/Frame 6.png'],
+    images: [cognito, frame1, frame3, frame4, frame5, frame6],
   },
 ]
 
@@ -229,14 +240,16 @@ function ProjectCard({ project, index, onImageClick }) {
       {/* ── Image preview (clickable) ── */}
       {hasImages && (
         <div
-          className="relative w-full h-48 overflow-hidden cursor-zoom-in"
-          onClick={() => onImageClick(project.images, 0)}
-        >
-          <img
-            src={project.images[0]}
-            alt={project.title}
-            className="w-full h-full object-top transition-transform duration-500 group-hover:scale-105"
-          />
+  className="relative w-full overflow-hidden cursor-zoom-in bg-gray-50"
+  style={{ aspectRatio: '16/9' }}
+  onClick={() => onImageClick(project.images, 0)}
+>
+  <img
+    src={project.images[0]}
+    alt={project.title}
+    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+    style={{ objectPosition: 'top center' }}
+  />
 
           {/* Image count badge */}
           {project.images.length > 1 && (

@@ -13,11 +13,11 @@ export default function Contact() {
   const rightInView = useInView(rightRef, { once: true, margin: '-80px' })
 
   return (
-    <section id="contact" className="relative z-10 bg-[#f4f3ef] py-24 px-6 md:px-16">
-      <div className="grid gap-16 items-center md:grid-cols-2">
+    <section id="contact" className="relative z-10 bg-[#f4f3ef] py-16 md:py-24 px-6 md:px-16">
+      <div className="grid gap-12 md:gap-16 items-center md:grid-cols-2">
 
         {/* Left */}
-        <div ref={leftRef}>
+        <div ref={leftRef} className="text-center md:text-left">
           <motion.h2
             initial={{ opacity: 0, y: 24 }}
             animate={leftInView ? { opacity: 1, y: 0 } : {}}
@@ -33,7 +33,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 24 }}
             animate={leftInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-base leading-relaxed mb-8"
+            className="text-base leading-relaxed mb-8 max-w-md mx-auto md:mx-0"
             style={{ color: '#5a5f7a' }}
           >
             I'm currently open to new opportunities. Whether you have a project
@@ -44,7 +44,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 24 }}
             animate={leftInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="flex gap-4 flex-wrap"
+            className="flex gap-4 flex-wrap justify-center md:justify-start"
           >
             <a href="mailto:saratudoma@gmail.com"
               className="inline-flex items-center gap-2 text-white font-medium text-sm px-8 py-3.5 rounded-full transition-all hover:-translate-y-0.5"
@@ -69,7 +69,7 @@ export default function Contact() {
         </div>
 
         {/* Right */}
-        <div ref={rightRef} className="flex flex-col gap-6">
+        <div ref={rightRef} className="flex flex-col gap-6 items-center md:items-start">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={rightInView ? { opacity: 1, y: 0 } : {}}
@@ -90,10 +90,11 @@ export default function Contact() {
             initial={{ opacity: 0, y: 24 }}
             animate={rightInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex gap-3 flex-wrap mt-2"
+            className="flex gap-3 flex-wrap justify-center md:justify-start"
           >
             {socials.map((s) => (
               <a key={s.name} href={s.href}
+                target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-full transition-all"
                 style={{ color: '#0a0f2c', border: '1.5px solid #e2e4f0' }}
                 onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#0a0f2c'; e.currentTarget.style.color = '#f4f3ef' }}
@@ -104,6 +105,7 @@ export default function Contact() {
             ))}
           </motion.div>
         </div>
+
       </div>
     </section>
   )
