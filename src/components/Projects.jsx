@@ -66,7 +66,7 @@ const projects = [
     {
     num: '07',
     title: 'Cognito',
-    desc: 'Description of your design work.',
+    desc: 'Design of an AI-powered Web Application that automates course management, organizes student materials, and provides a content-aware AI study chatbot.',
     tags: ['Figma', 'UI/UX'],
     github: null,
     live: 'https://www.figma.com/design/bP2HNLKcQKlbkYcsk41uCu/Cognito?node-id=0-1&t=9qbeud0CsgVwMDDo-1',
@@ -92,7 +92,6 @@ function Lightbox({ images, startIndex, onClose }) {
     return () => window.removeEventListener('keydown', handler)
   }, [])
 
-  // Prevent body scroll while open
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     return () => { document.body.style.overflow = '' }

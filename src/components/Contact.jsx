@@ -13,8 +13,8 @@ export default function Contact() {
   const rightInView = useInView(rightRef, { once: true, margin: '-80px' })
 
   return (
-    <section id="contact" className="relative z-10" style={{ backgroundColor: '#f4f3ef', padding: '6rem 4rem' }}>
-      <div className="grid gap-16 items-center" style={{ gridTemplateColumns: '1fr 1fr' }}>
+    <section id="contact" className="relative z-10 bg-[#f4f3ef] py-24 px-6 md:px-16">
+      <div className="grid gap-16 items-center md:grid-cols-2">
 
         {/* Left */}
         <div ref={leftRef}>
