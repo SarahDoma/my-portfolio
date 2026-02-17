@@ -1,26 +1,26 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPython, FaGit, FaGithub, FaFigma } from 'react-icons/fa'
-import { SiJavascript, SiTailwindcss} from 'react-icons/si'
+import { SiJavascript, SiTailwindcss } from 'react-icons/si'
 import { VscVscode } from "react-icons/vsc";
 import { MdDesignServices } from 'react-icons/md'
 
 const row1 = [
-  { name: 'HTML',        icon: <FaHtml5 />,            color: '#e34f26' },
-  { name: 'CSS',         icon: <FaCss3Alt />,           color: '#1572b6' },
-  { name: 'JavaScript',  icon: <SiJavascript />,        color: '#f7df1e' },
-  { name: 'React',       icon: <FaReact />,             color: '#61dafb' },
-  { name: 'Tailwind CSS',icon: <SiTailwindcss />,       color: '#38bdf8' },
-  { name: 'Node.js',     icon: <FaNodeJs />,            color: '#6cc24a' },
+  { name: 'HTML', icon: <FaHtml5 />, color: '#e34f26' },
+  { name: 'CSS', icon: <FaCss3Alt />, color: '#1572b6' },
+  { name: 'JavaScript', icon: <SiJavascript />, color: '#f7df1e' },
+  { name: 'React', icon: <FaReact />, color: '#61dafb' },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: '#38bdf8' },
+  { name: 'Node.js', icon: <FaNodeJs />, color: '#6cc24a' },
 ]
 
 const row2 = [
-  { name: 'Python',   icon: <FaPython />,            color: '#3776ab' },
-  { name: 'Git',      icon: <FaGit />,               color: '#f05032' },
-  { name: 'GitHub',   icon: <FaGithub />,            color: '#ffffff' },
-  { name: 'Figma',    icon: <FaFigma />,             color: '#a259ff' },
-  { name: 'VS Code',  icon: <VscVscode />,           color: '#007acc' },
-  { name: 'UI/UX',    icon: <MdDesignServices />,    color: '#f5c842' },
+  { name: 'Python', icon: <FaPython />, color: '#3776ab' },
+  { name: 'Git', icon: <FaGit />, color: '#f05032' },
+  { name: 'GitHub', icon: <FaGithub />, color: '#ffffff' },
+  { name: 'Figma', icon: <FaFigma />, color: '#a259ff' },
+  { name: 'VS Code', icon: <VscVscode />, color: '#007acc' },
+  { name: 'UI/UX', icon: <MdDesignServices />, color: '#f5c842' },
 ]
 
 function MarqueeRow({ items, direction = 'left', speed = 30 }) {
@@ -92,7 +92,7 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="skills" className="relative z-10 overflow-hidden" style={{ backgroundColor: '#0a0f2c', padding: '6rem 0' }}>
+    <section id="skills" className="relative z-10 overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24" style={{ backgroundColor: '#0a0f2c' }}>
 
       {/* Background glow blobs */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-20"
@@ -106,7 +106,7 @@ export default function Skills() {
         initial={{ opacity: 0, y: 24 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
-        className="flex items-baseline gap-4 mb-14 px-16"
+        className="flex items-baseline gap-2 sm:gap-4 mb-8 sm:mb-10 md:mb-14 px-6 sm:px-12 lg:px-16"
       >
         <span className="font-bold text-xs tracking-widest uppercase"
           style={{ fontFamily: "'Syne', sans-serif", color: '#f5c842' }}>02</span>

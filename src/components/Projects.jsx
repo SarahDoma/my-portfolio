@@ -10,7 +10,7 @@ const projects = [
     github: 'https://github.com/SarahDoma/aye-waterr.git',
     live: 'https://aye-waterr.vercel.app/',
     comingSoon: false,
-    images: ['/src/assets/aye-water.png'], 
+    images: ['/src/assets/aye-water.png'],
   },
   {
     num: '02',
@@ -32,7 +32,7 @@ const projects = [
     comingSoon: false,
     images: ['/src/assets/electra.png'],
   },
-    {
+  {
     num: '04',
     title: 'Flux',
     desc: 'An interactive particle system with three physics modes (Flow, Orbit, Burst). Real-time controls for particle count, speed, radius, and trail effects',
@@ -42,7 +42,7 @@ const projects = [
     comingSoon: false,
     images: ['/src/assets/flux.png'],
   },
-    {
+  {
     num: '05',
     title: 'Time Block',
     desc: 'A drag-and-drop time blocking calendar with customizable categories and productivity stats. Create custom block types, save templates, and track Deep Work vs Meeting balance.',
@@ -63,7 +63,7 @@ const projects = [
     images: [
       '/src/assets/uiux-1.png', '/src/assets/uiux-2.png'],
   },
-    {
+  {
     num: '07',
     title: 'Cognito',
     desc: 'Design of an AI-powered Web Application that automates course management, organizes student materials, and provides a content-aware AI study chatbot.',
@@ -110,7 +110,7 @@ function Lightbox({ images, startIndex, onClose }) {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors z-10"
+          className="absolute top-3 right-3 sm:top-6 sm:right-6 text-white/70 hover:text-white transition-colors z-10"
           style={{ fontSize: '1.5rem', lineHeight: 1, background: 'none', border: 'none', cursor: 'pointer' }}
         >
           ✕
@@ -119,7 +119,7 @@ function Lightbox({ images, startIndex, onClose }) {
         {/* Counter */}
         {images.length > 1 && (
           <div
-            className="absolute top-6 left-1/2 -translate-x-1/2 text-xs font-semibold tracking-widest uppercase"
+            className="absolute top-3 sm:top-6 left-1/2 -translate-x-1/2 text-xs font-semibold tracking-widest uppercase"
             style={{ color: 'rgba(255,255,255,0.5)', fontFamily: "'Syne', sans-serif" }}
           >
             {current + 1} / {images.length}
@@ -128,50 +128,50 @@ function Lightbox({ images, startIndex, onClose }) {
 
         {/* Image */}
         <motion.div
-  key={current}
-  initial={{ opacity: 0, scale: 0.95 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.25 }}
-  className="relative mx-16"
-  onClick={e => e.stopPropagation()}
-  style={{ width: '75vw', height: '75vh' }}
->
-  <img
-    src={images[current]}
-    alt={`Preview ${current + 1}`}
-    style={{
-      width: '100%',
-      height: '100%',
-      objectFit: 'contain',
-      borderRadius: '16px',
-      boxShadow: '0 40px 80px rgba(0,0,0,0.6)',
-    }}
-  />
-</motion.div>
+          key={current}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.25 }}
+          className="relative mx-4 sm:mx-8 md:mx-16"
+          onClick={e => e.stopPropagation()}
+          style={{ width: '90vw', height: '70vh', maxWidth: '1200px' }}
+        >
+          <img
+            src={images[current]}
+            alt={`Preview ${current + 1}`}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              borderRadius: '16px',
+              boxShadow: '0 40px 80px rgba(0,0,0,0.6)',
+            }}
+          />
+        </motion.div>
 
         {/* Prev / Next arrows */}
         {images.length > 1 && (
           <>
             <button
               onClick={e => { e.stopPropagation(); prev() }}
-              className="absolute left-6 top-1/2 -translate-y-1/2 flex items-center justify-center w-12 h-12 rounded-full transition-all"
+              className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full transition-all"
               style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', cursor: 'pointer', color: '#fff' }}
               onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
               onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <polyline points="15 18 9 12 15 6"/>
+                <polyline points="15 18 9 12 15 6" />
               </svg>
             </button>
             <button
               onClick={e => { e.stopPropagation(); next() }}
-              className="absolute right-6 top-1/2 -translate-y-1/2 flex items-center justify-center w-12 h-12 rounded-full transition-all"
+              className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full transition-all"
               style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', cursor: 'pointer', color: '#fff' }}
               onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
               onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <polyline points="9 18 15 12 9 6"/>
+                <polyline points="9 18 15 12 9 6" />
               </svg>
             </button>
           </>
@@ -179,7 +179,7 @@ function Lightbox({ images, startIndex, onClose }) {
 
         {/* Dot indicators */}
         {images.length > 1 && (
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+          <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
             {images.map((_, i) => (
               <button
                 key={i}
@@ -245,8 +245,8 @@ function ProjectCard({ project, index, onImageClick }) {
               style={{ backgroundColor: 'rgba(10,15,44,0.75)', color: '#fff', backdropFilter: 'blur(4px)' }}
             >
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
+                <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
               </svg>
               {project.images.length}
             </div>
@@ -262,8 +262,8 @@ function ProjectCard({ project, index, onImageClick }) {
               style={{ backgroundColor: 'rgba(255,255,255,0.95)', color: '#1a3cff' }}
             >
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
-                <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+                <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" />
+                <line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
               </svg>
               View {project.images.length > 1 ? `${project.images.length} images` : 'image'}
             </div>
@@ -272,10 +272,10 @@ function ProjectCard({ project, index, onImageClick }) {
       )}
 
       {/* ── Card content ── */}
-      <div className="p-8">
+      <div className="p-5 sm:p-6 md:p-8">
         {/* Ghost number */}
         <span
-          className="absolute top-4 right-6 font-extrabold text-6xl leading-none select-none"
+          className="absolute top-3 right-4 sm:top-4 sm:right-6 font-extrabold text-4xl sm:text-5xl md:text-6xl leading-none select-none"
           style={{ fontFamily: "'Syne', sans-serif", color: 'rgba(26,60,255,0.07)' }}
         >
           {project.num}
@@ -336,20 +336,20 @@ export default function Projects() {
   const [lightbox, setLightbox] = useState(null) // { images, index }
 
   return (
-    <section id="projects" className="relative z-10" style={{ backgroundColor: '#f4f3ef', padding: '6rem 4rem' }}>
+    <section id="projects" className="relative z-10 px-4 py-12 sm:px-8 sm:py-16 md:px-12 md:py-20 lg:px-16 lg:py-24" style={{ backgroundColor: '#f4f3ef' }}>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 24 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
-        className="flex items-baseline gap-4 mb-14"
+        className="flex items-baseline gap-2 sm:gap-4 mb-8 sm:mb-10 md:mb-14"
       >
         <span className="font-bold text-xs tracking-widest uppercase" style={{ fontFamily: "'Syne', sans-serif", color: '#1a3cff' }}>01</span>
         <h2 className="font-extrabold tracking-tighter" style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#0a0f2c' }}>Projects</h2>
-        <div className="flex-1 h-px ml-4 self-center" style={{ backgroundColor: '#e2e4f0' }} />
+        <div className="flex-1 h-px ml-2 sm:ml-4 self-center" style={{ backgroundColor: '#e2e4f0' }} />
       </motion.div>
 
-      <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {projects.map((project, i) => (
           <ProjectCard
             key={project.num}
