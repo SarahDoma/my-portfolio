@@ -58,7 +58,7 @@ const projects = [
   {
     num: '05',
     title: 'Time Block',
-    desc: 'A drag-and-drop time blocking calendar with customizable categories and productivity stats. Create custom block types, save templates, and track Deep Work vs Meeting balance.',
+    desc: 'A drag and drop time blocking calendar with customizable categories and productivity stats. Create custom block types, save templates, and track Deep Work vs Meeting balance.',
     tags: ['HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/SarahDoma/time-block.git',
     live: 'https://time-block-green.vercel.app/',
@@ -68,7 +68,7 @@ const projects = [
   {
     num: '06',
     title: 'FuelDey',
-    desc: 'Description of your design work.',
+    desc: 'Design of a map based fuel finder app, helping drivers locate nearby stations with real time price and availability data at a glance.',
     tags: ['Figma', 'UI/UX'],
     github: null,
     live: 'https://www.figma.com/design/3MqhHwNSmBfeDH7sQ1BRyk/FuelDey2?node-id=0-1&t=JiyZTs9C9avN23t3-1',
@@ -78,7 +78,7 @@ const projects = [
   {
     num: '07',
     title: 'Cognito',
-    desc: 'Design of an AI-powered Web Application that automates course management, organizes student materials, and provides a content-aware AI study chatbot.',
+    desc: 'Design of an AI powered Web Application that automates course management, organizes student materials, and provides a content aware AI study chatbot.',
     tags: ['Figma', 'UI/UX'],
     github: null,
     live: 'https://www.figma.com/design/bP2HNLKcQKlbkYcsk41uCu/Cognito?node-id=0-1&t=9qbeud0CsgVwMDDo-1',
